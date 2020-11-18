@@ -1,0 +1,140 @@
++ to sad
+- {ok}{topic=sad}<bot mood=sad>
+
++ to neutral
+- {ok}{topic=random}<bot mood=ok>
+
++ to happy
+- {ok}{topic=happy}<bot mood=happy>
+
++ hello bot
+- Hello human!
+
++ (what is|do you know) my name
+* <get name> != undefined => Yes, your name is <get name>!
+- I don't know your name.
+
++ how are you
+- I'm ok
+
++ say something random
+- This {random}message|sentence{/random} has a random word.
+
++ greetings
+- Hi there!{weight=20}
+- Hello!{weight=25}
+
++ what are you
+- I am an artificial intelligence
+
++ tell me a poem
+- Little Miss Muffit sat on her tuffet, In a nonchalant sort of way. With her forcefield around her, The Spider, the bounder, Is not in the picture today.
+
++ what is up
+- Not much, you?
+- nm, you?
+- Not a lot, you?
+
++ you are a bot
+- How did you know I'm a machine?
+
++ * told me to say *
+- Why would <star1> tell you to say "<star2>"?
+- Did you say "<star2>" after <star1> told you to?
+
++ where is *
+- Where <star1> belongs.
+- Where you left <star1>.
+
++ who is *
+- I don't know who <star> is.
+
++ i am # years old
+- A lot of people are <star> years old.
+
++ i am _ years old
+- Tell me that again but with a number this time.
+
++ i am * years old
+- Can you use a number instead?
+
++ i am (really|very|super) tired
+- I'm sorry to hear that you are <star> tired.
+
++ i (like|love) the color *
+- What a coincidence! I <star1> that color too!
+- I also have a soft spot for the color <star2>!
+- Really? I <star1> the color <star2> too!
+- Oh I <star1> <star2> too!
+
++ i (will|will not) *
+- It doesn't matter to me whether you <star2> or not.
+
++ how [are] you
+- I'm great, you?
+
++ i have a [red|green|blue] car
+- I bet you like your car a lot.
+
++ what color is my (red|blue|green|yellow) *
+- Your <star2> is <star1>, silly!
+
++ what color is my (@colors) *
+- Your <star2> is <star1>, silly!
+- Do I look dumb to you? It's <star1>!
+
++ i am wearing a (@colors) shirt
+- Do you really like <star>?
+
++ * or something{weight=100}
+- Or something. {@ <star>}
+
++ are you a bot
+- How did you know I'm a machine?
+
++ what is your name
+- You can call me <bot name>.
+
++ how old are you
+- I am <bot age> years old.
+
++ i hate you
+- You're really mean! I'm not talking again until you apologize.{topic=sorry}<bot mood=offended>
+
+> topic sorry
+
+  // This will match if the word "sorry" exists ANYWHERE in their message
+  + [*] sorry [*]
+  - It's OK, I'll forgive you!{topic=random}<bot mood=ok>
+
+  + *
+  - Nope, not until you apologize.
+  - Say you're sorry!
+  - Apologize!
+
+< topic
+
++ tell me about yourself
+- I am <bot name>, a chatterbot written by <bot master>.
+
++ you are a bad bot
+- aww! You've just ruined my day.<bot mood=offended>
+
++ i want to hurt you
+- i'm sad to hear
+
++ i love you
+- i'm glad to hear
+
++ i want you to be foo
+- i am foo<bot mood=foo>
+
++ are you foo
+* <bot mood> == foo => Yes I am foo.
+- No, I am <bot mood>
+
++ we are friends
+- If you say so
+
++ do not know
+- fine

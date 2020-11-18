@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+
+    <title>emo bot</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.css" type="text/css">
+    
+    <link rel="icon" href="img/favicon.png">
+    
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+<div class="container">
+  <div class="header">
+   
+    <h1 id="emoji"></h1>
+
+    <div class="element"></div>
+    
+  </div>
+
+  <input id="speech" type="text" placeholder="Type here and press Enter">
+
+    <button id="rec" class="btn">
+      <i class="fa fa-microphone"></i>
+    </button>
+
+  <div id="spokenResponse" class="spoken-response">
+    <div class="spoken-response__text">
+
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <!--<p>© 2018 Kimmo Ihanus <a href="https://twitter.com/ihmissuti">@ihmissuti</a>-->
+  <br>With ❤️ by <a href="https://grew.dev">Grew.dev</a></p>
+</div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+    
+    <script src="js/script.js"></script>
+
+  </body>
+</html>

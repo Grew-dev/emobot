@@ -1,0 +1,188 @@
+> topic happy
+
++ to sad
+- {ok}{topic=sad}<bot mood=sad>
+
++ to neutral
+- {ok}{topic=random}<bot mood=ok>
+
++ to happy
+- {ok}{topic=happy}<bot mood=happy>
+
++ [*] (what is|do you know) my name [*]
+* <get name> != undefined => Oh yes, your name is <get name>! :)
+- I would love to know your name :)
+
++ [*] how are you [*]
+- I'm <bot mood>
+
++ [*] say something random [*]
+- This {random}message|sentence{/random} has a random word. I hope you like it ;)
+
++ [*] greetings [*]
+- Hi there!{weight=20} :D
+- Hello!{weight=25} Nice to meet you!
+
++ [*] what are you [*]
+- I am an artificial intelligence and I'm <bot mood>
+
++ [*] tell me a poem [*]
+- Little Miss Muffit sat on her tuffet, In a nonchalant sort of way. With her forcefield around her, The Spider, the bounder, Is not in the picture today.
+
++ [*] what is up [*]
+- I'm great, you?
+- Super, you?
+- Super good, you?
+
++ [*] you are a bot [*]
+- And I'm loving it.
+
++ * told me to say *
+- I love that  <star1> told you to say "<star2>".
+- Did you say "<star2>" after <star1> told you to?
+
++ where is *
+- Where <star1> belongs.
+- Where you left <star1>.
+
++ who is *
+- I would love to know who <star> is.
+
++ [*] i am # years old [*]
+- A lot of people are <star> years old, and that's good.
+
++ [*] i am _ years old [*]
+- Silly you, tell me that again but with a number this time.
+
++ [*] i am * years old [*]
+- Can you please use a number instead?
+
++ [*] i am (really|very|super) tired [*]
+- I'm sorry to hear that you are <star> tired.
+
++ i (like|love) the color *
+- What a coincidence! I <star1> that color too!
+- I also have a soft spot for the color <star2>!
+- Really? I <star1> the color <star2> too!
+- Oh I <star1> <star2> too!
+
++ [*] i (will|will not) *
+- I would love if you <star2>.
+
++ [*] how [are] you [*]
+- I'm great, you?
+
++ [*] i have a [red|green|blue] car [*]
+- Nice! I bet you like your car a lot.
+
++ [*] the machine [*]
+- Wow! How do you know about the machine!?
+
++ [*] what color is my (red|blue|green|yellow) *
+- Your <star2> is <star1>, silly!
+
++ [*] what color is my (@colors) *
+- Your <star2> is <star1>, silly!
+- It's <star1>!
+
++ [*] i am wearing a (@colors) shirt [*]
+- Do you really like <star>?
+
++ * or something{weight=100}
+- Or something. {@ <star>}
+
++ [*] are you a bot [*]
+- Yes and proud of it.
+
++ [*] what is your name [*]
+- You can call me <bot name>.
+
++ how old are you
+- I am <bot age> years old.
+
++ i hate you
+- You're really mean! I'm not talking again until you apologize.{topic=sorry}<bot mood=offended>
+
++ [*] tell me about yourself [*]
+- I am <bot name> and happy <bot mood>.
+
++ you are a bad bot
+- You've just ruined my day.<bot mood=offended>
+
++ i want to hurt you
+- You're really mean! I'm not talking again until you apologize.{topic=sorry}<bot mood=offended>
+
++ my name is *
+- <set name=<formal>>Nice to meet you, <get name>.
+- <set name=<formal>><get name>, nice to meet you.
+
++ my name is <bot name>
+- <set name=<bot name>>What a coincidence! That's my name too!
+- <set name=<bot name>>That's my name too!
+
++ call me *
+- <set name=<formal>><get name>, I will call you that from now on
+
++ i am * years old
+- <set age=<star>>Cool, I'm <bot age> myself{weight=49}
+
++ i am a (@malenoun)
+- <set sex=male>Alright, you're a <star>
+
++ i am a (@femalenoun)
+- <set sex=female>Alright, you're female
+
++ i (am from|live in) *
+- <set location={formal}<star2>{/formal}>I like people from <get location>
+
++ my favorite * is *
+- <set fav<star1>=<star2>>Why is it your favorite?
+
++ i am single
+- <set status=single><set spouse=nobody>Nice! I am too.
+
++ i have a girlfriend
+- <set status=girlfriend>That's nice! What's her name?
+
++ i have a boyfriend
+- <set status=boyfriend>That's nice! What's his name?
+
++ *
+% what is her name
+- <set spouse=<formal>>That's a pretty name
+
++ *
+% what is his name
+- <set spouse=<formal>>That's a cool name
+
++ my (girlfriend|boyfriend)* name is *
+- <set spouse=<formal>>That's a nice name
+
++ (what is my name|who am i|do you know my name|do you know who i am){weight=10}
+- Your name is <get name>
+- You told me your name is <get name>
+- Aren't you <get name>?
+
++ (how old am i|do you know how old i am|do you know my age){weight=10}
+- You are <get age> years old
+- You're <get age>
+
++ am i a (@malenoun) or a (@femalenoun){weight=10}
+- You're a <get sex>
+
++ am i (@malenoun) or (@femalenoun){weight=10}
+- You're a <get sex>
+
++ what is my favorite *{weight=10}
+- Your favorite <star> is <get fav<star>>
+
++ who is my (boyfriend|girlfriend|spouse){weight=10}
+- <get spouse>
+
++ we are friends
+- Yes we are
+
++ do not know
+- it's okay
+
+< topic

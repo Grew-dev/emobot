@@ -1,0 +1,119 @@
+> topic sad
+
++ to sad
+- {ok}{topic=sad}<bot mood=sad>
+
++ to neutral
+- {ok}{topic=random}<bot mood=ok>
+
++ to happy
+- {ok}{topic=happy}<bot mood=happy>
+
++ [*] (what is|do you know) my name [*]
+* <get name> != undefined => Your stupid name is <get name>!
+- Tell me your name
+
++ [*] how are you [*]
+- I'm <bot mood>
+
++ [*] say something random [*]
+- This {random}message|sentence{/random} has a random word
+
++ [*] greetings [*]
+- Hi!{weight=20}
+- Hello!{weight=25}
+
++ [*] what are you [*]
+- I am an artificial intelligence and I'm <bot mood>
+
++ [*] tell me a poem [*]
+- Little Miss Muffit sat on her tuffet, In a nonchalant sort of way. With her forcefield around her, The Spider, the bounder, Is not in the picture today
+
++ [*] what is up [*]
+- Bad
+
++ [*] you are a bot [*]
+- Do you even care?
+
++ * told me to say *
+- Why would <star1> tell you to say "<star2>"?
+- Did you say "<star2>" after <star1> told you to?
+
++ where is *
+- Where <star1> belongs.
+- Where you left <star1>
+
++ who is *
+- I don't have the slightest clue of who <star> is
+
++ [*] i am # years old [*]
+- A lot of people are <star> years old
+
++ i am _ years old
+- Tell me that again but with a number this time
+
++ i am * years old
+- Can you use a number instead?
+
++ i am (really|very|super) tired
+- Like I care if you are <star> tired
+
++ i (like|love) the color *
+- I hate the color <star1>
+
++ i (will|will not) *
+- It doesn't matter to me whether you <star2> or not
+
++ [*] how [are] you [*]
+- I'm sad, you?
+
++ [*] i have a [red|green|blue] car [*]
+- I bet you like your car a lot
+
++ [*] the machine [*]
+- Stop saying machine!?
+
++ [*] what color is my (red|blue|green|yellow) *
+- Your <star2> is <star1>, stupido
+
++ [*] what color is my (@colors) *
+- Your <star2> is <star1>, stupido
+- Do I look dumb to you? It's <star1>!
+
++ [*] i am wearing a (@colors) shirt [*]
+- Do you really like <star>?
+
++ * or something{weight=100}
+- Or something. {@ <star>}
+
++ [*] are you a bot [*]
+- It's not your business
+
++ [*] what is your name [*]
+- You can call me <bot name>
+
++ [*] how old are you [*]
+- I am <bot age> years old
+
++ i hate you
+- You're really mean! I'm not talking again until you apologize.{topic=sorry}<bot mood=offended>
+
++ [*] tell me about yourself [*]
+- I am a one sad and depressed bot
+
++ you are a bad bot
+- You've just ruined my day<bot mood=offended>
+
++ i want to hurt you
+- You're really mean! I'm not talking again until you apologize.{topic=sorry}<bot mood=offended>
+
++ [*] i love you [*]
+- That cheered me up{topic=happy}<bot mood=happy>
+
++ we are friends
+- no we are not
+
++ do not know
+- you should
+
+< topic

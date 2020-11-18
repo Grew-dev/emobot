@@ -1,0 +1,247 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #2a2b35;
+  /*font-family: "Titillium Web", Arial, sans-serif;*/
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  margin: 0;
+}
+
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.header {
+  margin: 0 auto;
+}
+
+.barry-img {
+  width: 80px;
+  height: auto;
+}
+
+.header {
+  color: #7584a2;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+input {
+  font-size: 0.8em; 
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #3F7F93;
+  color: #000;
+  /*font-family: "Titillium Web";*/
+  font-family: 'Lato', sans-serif;
+  /*font-size: 20px;*/
+  line-height: 43px;
+  padding: 0 0.75em;
+  width: 400px;
+  -webkit-transition: all 0.35s ease-in;
+}
+
+input::placeholder {
+  /*font-size: 0.8em; */
+}
+
+textarea {
+  background-color: #070F24;
+  border: 1px solid #122435;
+  color: #606B88;
+  padding: 0.5em;
+  width: 100%;
+  -webkit-transition: all 0.35s ease-in;
+}
+
+input:active, input:focus, textarea:active, textarea:focus {
+  outline: 1px solid #48788B;
+}
+
+.btn {
+  background-color: #4c9de3;
+  border-radius: 5px;
+  border: 1px solid #549EAF;
+  /*color: #549EAF;*/
+  color: #000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Titillium Web";
+  font-size: 20px;
+  line-height: 43px;
+  padding: 0 0.75em;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: all 0.35s ease-in;
+}
+
+.btn:hover {
+  background-color: #1888A9;
+  color: #183035;
+}
+
+.debug {
+  bottom: 0;
+  position: fixed;
+  right: 0;
+}
+
+.debug__content {
+  font-size: 14px;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.35s ease-in;
+}
+
+.debug__content.is-active {
+  display: block;
+  max-height: 500px;
+}
+
+.debug__btn {
+  width: 100%;
+}
+
+.spoken-response {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.35s ease-in;
+}
+
+.spoken-response.is-active {
+  max-height: 400px;
+  margin-top: 5px;
+}
+
+.spoken-response__text {
+  background-color: #666;
+  color: #fff;
+  padding: 1em;
+  width: 400px;
+  font-size: 0.8em; 
+  border-radius: 5px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.spoken-response__text::after {
+     content: "";
+    /* position: absolute; */
+    top: 0;
+    right: -15px;
+    display: inline-block;
+    background-color: #ffffff;
+    vertical-align: bottom;
+    width: 2px;
+    height: 24px;
+    -webkit-animation: blink 1s step-end infinite;
+    animation: blink 1s step-end infinite;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+    color: #fff;
+}
+
+.typetext {
+  display: inline-block
+}
+
+@-webkit-keyframes blink {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@keyframes blink {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   /*background-color: red;*/
+   color: white;
+   text-align: center;
+   font-size: 0.8em;
+}
+
+.footer a {
+   color: #4c9de3;
+   text-decoration: none;
+}
+
+
+@media (max-width: 900px) {
+
+    
+    .btn {
+     margin-top: 5px;
+    }
+    
+    .mic-wrapper {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      }
+
+}
+
+@media (max-width: 400px) {
+  
+  .spoken-response__text {
+      background-color: #666;
+      color: #fff;
+      padding: 1em;
+      width: inherit;
+      font-size: 0.8em; 
+      border-radius: 5px;
+      font-family: 'Roboto Mono', monospace;
+    }
+      
+        
+    input {
+        background-color: #ffffff;
+        border-radius: 5px;
+        border: 1px solid #3F7F93;
+        color: #000;
+        /* font-family: "Titillium Web"; */
+        font-family: 'Lato', sans-serif;
+        /*font-size: 20px;*/
+        line-height: 43px;
+        padding: 0 0.75em;
+        width: inherit;
+        max-width: 400px;
+        -webkit-transition: all 0.35s ease-in;
+        font-size: 0.8em; 
+    }
+    
+    .fa {
+        display: none;
+    }
+
+    .btn {
+      display: none;
+    }
+    
+}

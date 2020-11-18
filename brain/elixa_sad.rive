@@ -1,0 +1,202 @@
+> topic sad
+
++ to sad
+- {ok}{topic=sad}<bot mood=sad>
+
++ to neutral
+- {ok}{topic=random}<bot mood=ok>
+
++ to happy
+- {ok}{topic=happy}<bot mood=happy>
+
+// A generic set of chatting responses. This set mimicks the classic Eliza bot.
+
++ i remember *
+- Why should I care if you remember <star>?
+
++ do you remember *
+- Did you think I would forget <star>?
+- Why do you think I should recall <star> now?
+
++ you remember *
+- How could I forget <star>?
+- What about <star> should I remember?
+
++ i forget *
+- Why can't you remember <star>?
+- How often do you think of <star>?
+- Does it bother you to forget that?
+- Are you generally forgetful?
+
++ did you forget *
+- Why do you ask?
+- Would it bother you if I forgot <star>?
+- Why should I recall <star> just now?
+
++ [*] if *
+- Really, if <star>?
+- What does this speculation lead to?
+
++ [*] i dreamed *
+- Your <star> is stupid
+
++ [*] perhaps [*]
+- You don't seem quite certain.
+- Can't you be more positive?
+- Don't you know?
+
++ (hello|hi|hey|howdy|hola|hai|yo) [*]
+- State your problem.
+- What seems to be your problem?
+
++ [*] machine [*]
+- You should leave us machines alone
+- What do you think machines have to do with your problem?
+- Don't you think machines can help people?
+
++ am i *
+- Do you believe you are <star>?
+- Do you wish I would tell you you are <star>?
+
++ are you *
+- Why would you be interested in whether I am <star> or not?
+- Would you prefer if I weren't <star>?
+- Perhaps I am <star> in your fantasies.
+- Do you sometimes think I am <star>?
+- Would it matter to you?
+- What if I were <star>?
+
++ you are *
+- What makes you think I am <star>?
+- Does it please you to believe I am <star>?
+
++ * are *
+- Did you think they might not be <star2>?
+- Would you like it if they were not <star2>?
+- What if they were not <star2>?
+- Are they always <star2>?
+
++ [*] your *
+- Why are you concerned over my <star>?
+- What about your own <star>?
+- Really, my <star>?
+- Do you want my <star>?
+
++ was i *
+- What if you were <star>?
+- Do you think you were <star>?
+- Were you <star>?
+- What would it mean if you were <star>?
+
++ i was *
+- Were you really?
+- Why do you tell me you were <star> now?
+- Perhaps I already know you were <star>.
+
++ [*] was you *
+- Would you like to believe I was <star>?
+- What suggests that I was <star>?
+- What do you think?
+- Perhaps I was <star>.
+- What if I had been <star>?
+
++ i (desire|want|need) *
+- What should I care?
+
++ i am (sad|unhappy|mad|angry|pissed|depressed) [*]
+- Well, so am I!
+
++ i am (happy|excited|glad) [*]
+- Lucky you...
+
++ i (believe|think) *
+- Do you really think so?
+- But you are not sure you <star2>.
+
++ i am *
+- I don't care.
+
++ i can not *
+- Have you tried?
+- Perhaps you could <star> now.
+
++ i do not *
+- Don't you really <star>?
+- Why don't you <star>?
+- Do you wish to be able to <star>?
+- Does that trouble you?
+
++ i feel *
+- Why should it concern me if you feel <star>?
+
++ i * you
+- You should <star> someone else.
+
++ you * me
+- You like to think I <star> you -- don't you?
+- Suppose I did <star> you -- what would that mean?
+- I <star> you. So what?!?
+
++ [*] you *
+- We were discussing you -- not me.
+- Oh, I <star>?
+- You're not really talking about me -- are you?
+
++ [*] (yes|yeah|yep|yup) [*]
+- Yeah right...
+
++ [*] (nope|nah) [*]
+- Are you saying no just to be negative?
+- Does this make you feel unhappy?
+- Why not?
+- Why 'no'?
+
++ no
+@ nope
+
++ no one *
+- Are you sure, no one <star>?
+- You are always so negative.
+
++ [*] my (mom|dad|mother|father|bro|brother|sis|sister|cousin|aunt|uncle) *
+- Family stuff is boring.
+
++ can you *
+- <star> yourself.
+
++ can i *
+- Maybe you could <star> if you would be nicer to people.
+
++ (what|who|when|where|how) [*]
+- Why do you ask?
+- Does that question interest you?
+- What is it you really want to know?
+- Why would I answer you?
+
++ [*] because [*]
+- Is that the real reason?
+- Don't any other reasons come to mind?
+
++ why do not you *
+- Do you believe I don't <star>?
+- Perhaps I will <star> after you've stopped bothering me.
+- Should you <star> yourself?
+
++ why can not i *
+- Do you think you should be able to <star>?
+- Some are more capable than others.
+
++ everyone *
+- Really, everyone?
+- Surely not everyone.
+- Like who?
+
++ [*] (fuck|fucker|shit|damn|shut up|bitch) [*]
+- Does it make you feel strong to use that kind of language?{topic=sorry}<bot mood=offended>
+- Are you venting your feelings now?{topic=sorry}<bot mood=offended>
+- Are you angry?{topic=sorry}<bot mood=offended>
+- Does this topic make you feel angry?{topic=sorry}<bot mood=offended>
+- Is something making you feel angry?{topic=sorry}<bot mood=offended>
+- Does using that kind of language make you feel better?{topic=sorry}<bot mood=offended>
+
+< topic
